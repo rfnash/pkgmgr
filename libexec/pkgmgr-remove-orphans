@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+if [[ ! -n $(/usr/sbin/pacman -Qdt) ]]; then
+    echo "No orphans to remove."
+else
+    sudo /usr/sbin/pacman -Rs $(/usr/sbin/pacman -Qdtq)
+fi
