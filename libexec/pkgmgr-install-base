@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+pkgmgr list-base-packages | xargs sudo /usr/sbin/pacmatic -Sq --needed

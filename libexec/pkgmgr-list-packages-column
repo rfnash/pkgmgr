@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+/usr/sbin/yaourt -Qet \
+    | sed -e 's/\(^[^\/]*\)\/\([^\ ]*\)\ \([^\ ]*\)\ */\1\t\2\t\3\t/g' \
+    | column -s "	" -t

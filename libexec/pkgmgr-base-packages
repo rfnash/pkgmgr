@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+sudo /usr/sbin/pacman -Sgq base \
+    | grep -v linux-pf \
+    | grep -v your-freedom \
+    | grep -v pacman-mirrorlist-libre \
+    | grep -v kernel26-pf \
+    | grep -v systemd-sysvcompat \
+    | grep -v linux-grsec \
+    | grep -v linux-libre \
+    | grep -v licenses-libre \
+    | grep -v linux-pax \
+    | grep -v "gcc-libs$"
