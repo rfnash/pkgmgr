@@ -3,4 +3,4 @@
 /usr/sbin/yaourt -Qet \
     | sed -e 's/\(^[^\/]*\)\/\([^\ ]*\)\ \([^\ ]*\)\ */\1:\2:\3:/g' \
     | column -s ":" -t \
-    | most
+    | "$PAGER"
