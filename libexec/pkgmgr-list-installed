@@ -2,4 +2,5 @@
 
 /usr/sbin/yaourt -Qet \
     | sed -e 's/\(^[^\/]*\)\/\([^\ ]*\)\ \([^\ ]*\)\ */\1:\2:\3:/g' \
-    | column -s ":" -t
+    | column -s ":" -t \
+    | most
