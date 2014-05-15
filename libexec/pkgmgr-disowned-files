@@ -9,7 +9,7 @@ trap 'rm -rf "$tmp"' EXIT
 
 /usr/sbin/pacman -Qlq | sort -u > "$db"
 
-find /bin /etc /lib /sbin /usr \
+sudo ionice -c 3 nice -17 find /bin /etc /lib /sbin /usr \
          ! -name lost+found \
          \( -type d -printf '%p/\n' -o -print \) | sort > "$fs"
 
