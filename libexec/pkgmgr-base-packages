@@ -10,4 +10,8 @@ sudo /usr/sbin/pacman -Sgq base \
     | grep -v linux-libre \
     | grep -v licenses-libre \
     | grep -v linux-pax \
+    | grep -v jfsutils \
+    | grep -v mdadm \
+    | grep -v reiserfsprogs \
+    | grep -v xfsprogs \
     | grep -v "gcc-libs$"
