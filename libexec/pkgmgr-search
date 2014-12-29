@@ -1,3 +1,9 @@
 #!/usr/bin/env bash
+# Usage: pkgmgr search PKGNAME
+# Summary: Searches the list of packages for PKGNAME
 
-/usr/sbin/pacaur --color always -Ss "$@" | "$PAGER"
+if [ -x /usr/sbin/pacaur ]; then
+    /usr/sbin/pacaur --color always -Ss "$@" | "$PAGER"
+elif [ -x /usr/sbin/xbps-query ]; then
+    /usr/sbin/xbps-query --regex -Rs "$@" | "$PAGER"
+fi
